@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.top-bar {
+    width: 100%;
+    height: 8vh; /* Barens højde er 8% af skærmhøjden */
+    position: fixed; /* Holder baren fast i toppen */
+    top: 0;
+    left: 0;
+    background-color: rgba(212, 91, 4, 0.716); 
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+    z-index: 1000; /*baren ligger over alt andet */
+}
+
+.menu-icon {
+    font-size: 6vh; 
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+.menu-icon:hover {
+    font-size: 7vh;
+    cursor: ;
+    color: rgb(66, 66, 66);
+}
+
+.title {
+    font-size: 5vh; 
+    color: rgb(4, 4, 4);
+    flex-grow: 1; /* Titel i midten */
+}
+.title:hover {
+    font-size: 5.2vh;
+    color: rgb(66, 66, 66);
+}
+
+.nav-links {
+    display: flex;
+    font-size: 6vh;
+    gap: 30px;
+    margin-right: 40px;
+}
+
+
+.user-icon {
+    font-size: 4vh;
+    color: rgb(1, 1, 1);
+}
+
+.dropdown-menu {
+    display: none; /* Skjult som standard */
+    position: absolute;
+    top: 90px; /* Lige under topbaren */
+    left: 20px;
+    background-color: rgba(255, 165, 0, 0.9); 
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    height: 20vh;
+    width: 15vh;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 0;
+    font-size: 1.5vh;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 140, 0, 0.9); 
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        justify-content: space-between;
+    }
+    .menu-icon {
+        justify-content: space-between;
+    }
+}
+
+
+.nav-links a {
+    color: rgb(4, 4, 4);
+    text-decoration: none;
+    font-size: 3vh;
+    margin-top: 35px;
+}
+
+.user-icon {
+    font-size: 2vh;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+    }
+
+    .top-bar {
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 8vh;
+}
+
+/* Notification Page Styling */
+.notification-page {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.notification-count {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Notification List */
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notification-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+    background-color: #e6f7ff;
+}
+
+/* Notification Content */
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.notification-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.notification-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Delete Button Styling */
+.delete-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    position: relative;
+    top: 20px;
+}
+
+.delete-button:hover {
+    opacity: 0.7;
+}
